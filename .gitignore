@@ -1,0 +1,17 @@
+# data (don't commit raw datasets — Kaggle/BRFSS license & repo size)
+data/*.csv
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# env
+.venv/
+venv/
+
+# streamlit
+.streamlit/secrets.toml
+
+# OS
+.DS_Store

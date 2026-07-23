@@ -1,0 +1,90 @@
+{
+  "dataset": "clinical",
+  "target": "diabetes",
+  "feature_order": [
+    "age",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level",
+    "gender",
+    "smoking_history",
+    "hypertension",
+    "heart_disease"
+  ],
+  "best_model_name": "Gradient Boosting (XGBoost)",
+  "cv_leaderboard": {
+    "Logistic Regression": {
+      "cv_f1": 0.5694,
+      "cv_auc": 0.962,
+      "cv_recall": 0.88
+    },
+    "Random Forest": {
+      "cv_f1": 0.6204,
+      "cv_auc": 0.9754,
+      "cv_recall": 0.9084
+    },
+    "Gradient Boosting (XGBoost)": {
+      "cv_f1": 0.5585,
+      "cv_auc": 0.9752,
+      "cv_recall": 0.9303
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.8746,
+    "f1": 0.5594,
+    "recall": 0.9371,
+    "roc_auc": 0.9756
+  },
+  "threshold_presets": [
+    {
+      "threshold": 0.1,
+      "recall": 1.0,
+      "precision": 0.1864,
+      "f1": 0.3142,
+      "note": "Maximum recall \u2014 very low precision expected"
+    },
+    {
+      "threshold": 0.2,
+      "recall": 0.9941,
+      "precision": 0.2487,
+      "f1": 0.3979,
+      "note": ""
+    },
+    {
+      "threshold": 0.3,
+      "recall": 0.9876,
+      "precision": 0.2902,
+      "f1": 0.4486,
+      "note": ""
+    },
+    {
+      "threshold": 0.4,
+      "recall": 0.9588,
+      "precision": 0.3437,
+      "f1": 0.506,
+      "note": "Recommended screening threshold (best recall with usable precision)"
+    },
+    {
+      "threshold": 0.45,
+      "recall": 0.9476,
+      "precision": 0.3686,
+      "f1": 0.5308,
+      "note": ""
+    },
+    {
+      "threshold": 0.5,
+      "recall": 0.9371,
+      "precision": 0.3987,
+      "f1": 0.5594,
+      "note": "Balanced / standard cutoff"
+    },
+    {
+      "threshold": 0.6,
+      "recall": 0.8182,
+      "precision": 0.641,
+      "f1": 0.7189,
+      "note": ""
+    }
+  ],
+  "decision_threshold": 0.4
+}
